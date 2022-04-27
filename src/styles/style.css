@@ -1,6 +1,17 @@
+/*Color palette
+principal = #f6f5f1
+secundario = #030303
+terciario = faf9f7
+cuaternario = #000000
+quintinario = #a5a5a3
+
+*/
+
+
 *{
     margin: 0%;
     padding: 0%;
+    background-color: #f6f5f1;
 }
 .logo{
     width: 80px;
@@ -13,17 +24,32 @@
     justify-content: space-between;
     align-items: center;
     margin-bottom: 20px;
-    background-color: #f6f5f1;
+    background-color: #faf9f7;
 }
 
+h1{
+    font-size: 70px;
+    font-weight: bold;
+    color: #030303;
+    display: inline-block;
+    align-items: center;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.divHeader{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
 
 .itemLista{
+    color: #030303;
     display: inline-block;
-    margin-right: 20px;
+    margin-right: 0px;
     margin-bottom: 20px;
     font-size: 20px;
     font-weight: bold;
-    padding: 10px;
+    padding: 20px;
 }
 
 a{

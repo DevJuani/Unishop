@@ -3,8 +3,9 @@ export default function Navbar (){
     return (
         <header className='header'>
             <nav>
-                <div>
+                <div className='divHeader'>
                     <img className='logo' src = {logounicornio} alt = 'logo'/>
+                    <h1>Uni-Store</h1>
                 </div>
                 <ul className='unorderedList'>
                     <li className='itemLista'>
