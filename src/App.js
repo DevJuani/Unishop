@@ -1,6 +1,10 @@
+import Navbar from "./components/Navbar";
 function App() {
   return (
-    <h1>App para la pagina de merch de Unicornio</h1>
+    <div className="App">
+      <Navbar />
+    </div>
+    
   );
 }
 

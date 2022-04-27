@@ -1,3 +1,33 @@
-h1{
-    color: red
+*{
+    margin: 0%;
+    padding: 0%;
+}
+.logo{
+    width: 80px;
+    height: 80px;
+    margin: 20px;
+}
+
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    background-color: #f6f5f1;
+}
+
+
+.itemLista{
+    display: inline-block;
+    margin-right: 20px;
+    margin-bottom: 20px;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 10px;
+}
+
+a{
+    text-decoration: none;
+    color: #000;
+    font-family: 'Courier New', Courier, monospace;
 }
