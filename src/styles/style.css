@@ -7,53 +7,75 @@ quintinario = #a5a5a3
 
 */
 
-
 *{
-    margin: 0%;
-    padding: 0%;
-    background-color: #f6f5f1;
-}
-.logo{
-    width: 80px;
-    height: 80px;
-    margin: 20px;
+    margin: 0;
+    padding: 0;
+    background-color: #dbdad7;
 }
 
+/*Logo unicornio navbar*/
+.logo{
+    width: 100px;
+    height: 100px;
+    border-radius: 100%;
+}
+/*---------------------*/
+
+/*----Header-------*/
 .header{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 20px;
-    background-color: #faf9f7;
+    background-color: #030303;
 }
+/*-----------------*/
 
-h1{
-    font-size: 70px;
-    font-weight: bold;
-    color: #030303;
-    display: inline-block;
-    align-items: center;
-    font-family: 'Courier New', Courier, monospace;
+
+/*Cart image*/
+.cartIconImg{
+    width: 30px;
 }
+/*--------------*/
 
-.divHeader{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+/*Just color backgrounds to match the header*/
+nav.navbar{
+    background-color: #030303;
 }
-
-.itemLista{
-    color: #030303;
-    display: inline-block;
-    margin-right: 0px;
-    margin-bottom: 20px;
-    font-size: 20px;
-    font-weight: bold;
-    padding: 20px;
+div.container-fluid{
+    background-color: #030303;
 }
+/*------------------------------------------*/
 
-a{
+/*List whith items to navigate the website*/
+ul{
+    list-style: none;
+    background-color: #030303;
+}
+.liLink{
+    color: #faf9f7;
     text-decoration: none;
-    color: #000;
-    font-family: 'Courier New', Courier, monospace;
+    background-color: #030303;
+    padding: 10px;
+}
+.liLink:hover{
+    color: #030303;
+    text-decoration: none;
+    background-color: #faf9f7;
+    transition: 0.5s;
+}
+.navItem{
+    color: #faf9f7;
+    font-size: 20px;
+    background-color: #030303;
+    padding: 10px;
+    margin: 20px;
+}
+/*----------------------------------------*/
+
+.cartWidget{
+    display: flex;
+    align-items: center;
+    background-color: #030303;
+    padding: 10px;
+    cursor: pointer;
 }
