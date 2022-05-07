@@ -79,3 +79,29 @@ ul{
     padding: 10px;
     cursor: pointer;
 }
+
+.itemCountButton{
+    background-color: #faf9f7;
+    border: 1px solid #030303;
+    border-radius: 10%;
+    color: #030303;
+    font-size: 20px;
+    padding-left: 40px;
+    padding-right: 40px;
+    margin: 20px;
+    cursor: pointer;
+}
+.itemCountUser{
+    color: #faf9f7;
+    font-size: 20px;
+    padding: 10px;
+    margin: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.itemCount-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

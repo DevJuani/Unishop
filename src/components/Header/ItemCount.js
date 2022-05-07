@@ -2,7 +2,7 @@ import React from 'react';
 export default function ItemCount({stock, initial, onAdd}) {
     const [count, setCount] = React.useState(initial);
     const handleAdd = () => {
-        if(count <= stock) {
+        if(count < stock) {
         setCount(count + 1);
         onAdd(count + 1);
         }
@@ -16,12 +16,15 @@ export default function ItemCount({stock, initial, onAdd}) {
     return (
         <div className='itemCount'>
             <div className='itemCount-container'>
-                <div className='itemCount-container-stock'>
-                    <p>{count}</p>
+                <div className='itemCount-container'>
+                    <p className='itemCount-text'>
+                        Stock disponible: {stock}
+                    </p>
                 </div>
                 <div className='itemCount-container-buttons'>
-                    <button className='itemCount-container-buttons-add' onClick={handleAdd}>+</button>
-                    <button className='itemCount-container-buttons-remove' onClick={handleRemove}>-</button>
+                    <p className='itemCountUser'>{count}</p>
+                    <button className='itemCountButton' onClick={handleAdd}>+</button>
+                    <button className='itemCountButton' onClick={handleRemove}>-</button>
                 </div>
             </div>
         </div>

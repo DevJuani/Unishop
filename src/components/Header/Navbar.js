@@ -1,7 +1,5 @@
 import React from 'react'; 
 import CartWidget from "./CartWidget";
-import ItemListContainer from './ItemListContainer';
-import ItemCount from './ItemCount';
 export default function Navbar (){
     return (
         <header className='header'>
@@ -22,14 +20,10 @@ export default function Navbar (){
                             <li className='cartWidget'>
                                 <CartWidget/>
                             </li>
-                            <li>
-                            <ItemCount stock='10' initial='0' onAdd={() => {}}/>
-                            </li>
                         </ul>
                     </div>
                 </div>
             </nav>
-            <ItemListContainer greeting='Bienvenido a Unishop'/>
         </header>
     );
 }
