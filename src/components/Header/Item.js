@@ -1,15 +1,12 @@
-import ItemCount from "./ItemCount";
-export default function Item({ item }) {
-    return (
-        <div className='item'>
-            <img src={item.image} alt={item.name} />
-            <div className='item-info'>
-                <h3>{item.name}</h3>
-                <p>{item.price}</p>
-                <button>Agregar al carrito</button>
-                <ItemCount stock={item.stock} initial={0} onAdd={() => {}} />
+export default function Item ({product}){
+    return(
+        <div class="card" >
+            <img src="{product.image}" class="card-img-top" alt="..."/>
+            <div class="card-body">
+                <h5 class="card-title">{product.name}</h5>
+                <p class="card-text">${product.price}, stock:{product.stock}</p>
+                <a href="#" >Ver mas</a>
             </div>
         </div>
-    );
+    )
 }
-

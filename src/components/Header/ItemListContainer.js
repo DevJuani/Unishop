@@ -1,7 +1,13 @@
-export default function ItemListContainer(props) {
+import ItemCount from "./ItemCount";
+import React from "react";
+export default function ItemListContainer() {
+    const [count, setCount] = React.useState(0);
+    const onAdd = (count) => {
+        setCount(count);
+    }
     return (
-        <div className='itemListContainer'>
-            <h1>{props.greeting}</h1>
+        <div className="container">
+            <ItemCount stock={10} initial={1} onAdd={onAdd} />
         </div>
     )
 }

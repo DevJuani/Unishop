@@ -1,38 +1,30 @@
 export const products = [
     {
         id: 1,
-        name: 'Remera',
+        name: 'Taza',
         price: 100,
-        image: 'https://via.placeholder.com/150',
+        stock: 10,
+        image: '',
     },
     {
         id: 2,
-        name: 'Buzo',
+        name: 'Remera',
         price: 200,
-        image: 'https://via.placeholder.com/150',
+        stock: 10,
+        image: '/images/unicornio.jpg',
     },
     {
         id: 3,
         name: 'Mate',
         price: 300,
-        image: 'https://via.placeholder.com/150',
+        stock: 10,
+        image: '/images/unicornio.jpg',
     },
     {
         id: 4,
-        name: 'Taza',
+        name: 'Buzo',
         price: 400,
-        image: 'https://via.placeholder.com/150',
+        stock: 10,
+        image: '/images/unicornio.jpg',
     },
-    {
-        id: 5,
-        name: 'Keycap',
-        price: 500,
-        image: 'https://via.placeholder.com/150',
-    },
-    {
-        id: 6,
-        name: 'Stickers + pines',
-        price: 600,
-        image: 'https://via.placeholder.com/150',
-    }
 ];
