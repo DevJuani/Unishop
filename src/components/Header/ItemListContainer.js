@@ -1,13 +1,30 @@
-import ItemCount from "./ItemCount";
-import React from "react";
-export default function ItemListContainer() {
-    const [count, setCount] = React.useState(0);
-    const onAdd = (count) => {
-        setCount(count);
+import React, { Fragment } from 'react';
+import {products} from './../../data/products';
+import ItemList from './ItemList';
+    const ItemListContainer = (props) => {
+        const [productos, setProducts] = React.useState([]);
+        const Promise = () =>{
+            return new Promise((resolve, reject) => {
+                setTimeout(() => {
+                    resolve(products);
+                }, 2000)
+            })
+        }
+        React.useEffect(() => {
+            Promise().then((products) => {
+                setProducts(productos);
+                console.log(products);
+            })
+        },);
+        if (products.length === 0) {
+            return <div>Cargando...</div>
+        } else {
+            return (
+                <Fragment>
+                    <p>{props.greeting}</p>
+                    <ItemList products={products}/>
+                </Fragment>
+            )
+        }
     }
-    return (
-        <div className="container">
-            <ItemCount stock={10} initial={1} onAdd={onAdd} />
-        </div>
-    )
-}
+export default ItemListContainer;

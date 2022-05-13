@@ -7,7 +7,7 @@ export default function ItemCount({stock, initial, onAdd}) {
         }
     }
     const handleRemove = () => {
-        if(count > 0) {
+        if(count > initial) {
         setCount(count - 1);
         }
     }

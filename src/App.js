@@ -11,7 +11,10 @@ function App() {
         <Navbar />
       </div>
       <div className="container">
-        <ItemListContainer />
+        <ItemListContainer/>
+      </div>
+      <div>
+        <ItemList />
       </div>
     </>
   );

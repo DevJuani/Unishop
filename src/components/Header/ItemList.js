@@ -1,14 +1,11 @@
-import {products} from './../../data/products';
 import Item from './Item';
-export default function ItemList(){
+const ItemList = ({products}) => {
     return (
-        <div className="container">
+        <div className="row">
             {products.map(product => (
-                    <div key={product.id}>
-                        <Item product={product} key = {product.id} />
-                </div>
-                )
-            )}
+                <Item key={product.id} product={product} />
+            ))}
         </div>
-    )
+    );
 }
+export default ItemList;
