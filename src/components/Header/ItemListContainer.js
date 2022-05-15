@@ -3,7 +3,9 @@ import {products} from './../../data/products';
 import ItemList from './ItemList';
     const ItemListContainer = (props) => {
         const [productos, setProducts] = React.useState([]);
-        const Promise = () =>{
+        const [loading, setLoading] = React.useState(true);
+
+        const getProducts = () =>{
             return new Promise((resolve, reject) => {
                 setTimeout(() => {
                     resolve(products);
@@ -11,20 +13,14 @@ import ItemList from './ItemList';
             })
         }
         React.useEffect(() => {
-            Promise().then((products) => {
-                setProducts(productos);
+            getProducts().then((products) => {
+                setProducts(products);
+                setLoading(false);
                 console.log(products);
             })
         },);
-        if (products.length === 0) {
-            return <div>Cargando...</div>
-        } else {
-            return (
-                <Fragment>
-                    <p>{props.greeting}</p>
-                    <ItemList products={products}/>
-                </Fragment>
-            )
-        }
+        return (
+            loading? <h1>Cargando...</h1> :<ItemList products={productos} />
+        )
     }
 export default ItemListContainer;
