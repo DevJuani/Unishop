@@ -1,9 +1,8 @@
 import Navbar from "./components/Header/Navbar";
 import ItemListContainer from "./components/Header/ItemListContainer";
-import Item from "./components/Header/Item";
-import ItemCount from "./components/Header/ItemCount";
-import {products} from './data/products';
 import ItemList from "./components/Header/ItemList";
+import ItemDetail from "../src/components/Item/ItemDetail";
+import ItemDetailContainer from "../src/components/Item/ItemDetailContainer";
 function App() {
   return (
     <>
@@ -15,6 +14,12 @@ function App() {
       </div>
       <div>
         <ItemList />
+      </div>
+      <div>
+        <ItemDetailContainer />
+      </div>
+      <div>
+        <ItemDetail />
       </div>
     </>
   );

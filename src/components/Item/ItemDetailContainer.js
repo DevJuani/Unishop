@@ -1,26 +1,25 @@
 import React from 'react';
 import {products} from './../../data/products';
-import ItemList from './ItemList';
-    const ItemListContainer = (props) => {
-        const [productos, setProducts] = React.useState([]);
+import ItemDetail from './ItemDetail';
+    const ItemDetailContainer = (props) => {
+        const [productos, setItems] = React.useState([]);
         const [loading, setLoading] = React.useState(true);
 
         const getProducts = () =>{
             return new Promise((resolve, reject) => {
                 setTimeout(() => {
                     resolve(products);
-                }, 2000)
+                }, 4000)
             })
         }
         React.useEffect(() => {
             getProducts().then((products) => {
-                setProducts(products);
+                setItems(products);
                 setLoading(false);
-                console.log(products);
             })
         },);
         return (
-            loading? <h1>Cargando...</h1> :<ItemList products={productos} />
+            loading? <h1>Cargando Detalles de productos...</h1> :<ItemDetail products={productos}/>
         )
     }
-export default ItemListContainer;
+export default ItemDetailContainer;
