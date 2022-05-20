@@ -1,8 +1,10 @@
 import React from 'react';
 import {products} from './../../data/products';
 import ItemDetail from './ItemDetail';
+
+
     const ItemDetailContainer = (props) => {
-        const [productos, setItems] = React.useState([]);
+        const [data, setData] = React.useState([]);
         const [loading, setLoading] = React.useState(true);
 
         const getProducts = () =>{
@@ -14,12 +16,12 @@ import ItemDetail from './ItemDetail';
         }
         React.useEffect(() => {
             getProducts().then((products) => {
-                setItems(products);
+                setData(products);
                 setLoading(false);
             })
         },);
         return (
-            loading? <h1>Cargando Detalles de productos...</h1> :<ItemDetail products={productos}/>
+            loading? <h1>Cargando Detalles de productos...</h1> :<ItemDetail products={data}/>
         )
     }
 export default ItemDetailContainer;

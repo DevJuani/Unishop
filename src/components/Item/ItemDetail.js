@@ -1,5 +1,4 @@
 import axios from "axios";
-import { products } from "../../data/products";
 export default function ItemDetail ({products}) {
     axios.get('https://dog.ceo/api/breeds/image/random')
     .then(function (response) {

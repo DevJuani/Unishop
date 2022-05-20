@@ -1,7 +1,7 @@
+import React from "react";
 import Navbar from "./components/Header/Navbar";
 import ItemListContainer from "./components/Header/ItemListContainer";
 import ItemList from "./components/Header/ItemList";
-import ItemDetail from "../src/components/Item/ItemDetail";
 import ItemDetailContainer from "../src/components/Item/ItemDetailContainer";
 function App() {
   return (
@@ -17,9 +17,6 @@ function App() {
       </div>
       <div>
         <ItemDetailContainer />
-      </div>
-      <div>
-        <ItemDetail />
       </div>
     </>
   );
