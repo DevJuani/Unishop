@@ -1,5 +1,4 @@
 import Item from './Item';
-import { products } from '../../data/products';
 const ItemList = ({products}) => {
     return (
         <div className="row">

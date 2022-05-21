@@ -1,27 +1,29 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import {products} from './../../data/products';
 import ItemDetail from './ItemDetail';
 
+const ItemDetailContainer = () => {
+    let itemID = 3;
 
-    const ItemDetailContainer = (props) => {
-        const [data, setData] = React.useState([]);
-        const [loading, setLoading] = React.useState(true);
+    const [selected, setSelected] = React.useState({});
 
-        const getProducts = () =>{
-            return new Promise((resolve, reject) => {
-                setTimeout(() => {
-                    resolve(products);
-                }, 4000)
-            })
-        }
-        React.useEffect(() => {
-            getProducts().then((products) => {
-                setData(products);
-                setLoading(false);
-            })
-        },);
-        return (
-            loading? <h1>Cargando Detalles de productos...</h1> :<ItemDetail products={data}/>
-        )
-    }
+    const getItem = () => {
+        const promesa = new Promise((resolve, reject) => {
+            setTimeout(() => {
+                resolve(products.find((product) => product.id === itemID));
+            }, 4000);
+        });
+        promesa.then(product => {
+            setSelected(product);
+        });
+    };
+    useEffect(()=>{
+        getItem()},[itemID])
+    return (
+        <div className="row">
+            <ItemDetail product={selected} />
+        </div>
+    );
+}
+
 export default ItemDetailContainer;
