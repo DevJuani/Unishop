@@ -1,7 +1,7 @@
 import React from 'react';
 import {products} from './../../data/products';
 import ItemList from './ItemList';
-    const ItemListContainer = (props) => {
+    const ItemListContainer = (props, id) => {
         const [productos, setProducts] = React.useState([]);
         const [loading, setLoading] = React.useState(true);
 

@@ -1,3 +1,4 @@
+import { NavLink } from "react-router-dom"
 export default function Item ({product}){
     return(
         <div class="card" >
@@ -5,7 +6,7 @@ export default function Item ({product}){
             <div class="card-body">
                 <h5 class="card-title">{product.name}</h5>
                 <p class="card-text">${product.price}, stock:{product.stock}</p>
-                <a href="#" >Ver mas</a>
+                <NavLink to={`/Productos/${product.id}`} class="btn btn-primary">Ver mas</NavLink>
             </div>
         </div>
     )

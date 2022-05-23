@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import {products} from './../../data/products';
 import ItemDetail from './ItemDetail';
 
-const ItemDetailContainer = () => {
+const ItemDetailContainer = ({title, productid}) => {
     let itemID = 3;
 
     const [selected, setSelected] = React.useState({});
@@ -18,8 +18,8 @@ const ItemDetailContainer = () => {
         });
     };
     useEffect(()=>{
-        getItem()},[itemID])
-    return (
+        getItem()},[products.id])
+    return (        
         <div className="row">
             <ItemDetail product={selected} />
         </div>

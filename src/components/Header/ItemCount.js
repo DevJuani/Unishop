@@ -1,4 +1,6 @@
 import React from 'react';
+import { BrowserRouter, Routes, Route, NavLink } from 'react-router-dom';
+import Cart from '../../view/Cart/Cart';
 export default function ItemCount({stock, initial, onAdd}) {
     const [count, setCount] = React.useState(initial);
     const handleAdd = () => {
