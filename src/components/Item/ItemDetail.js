@@ -1,8 +1,19 @@
+import React from 'react';
+import { NavLink } from 'react-router-dom';
 import ItemCount from '../Header/ItemCount';
 import {useParams} from 'react-router-dom';
 import { products } from '../../data/products';
 export default function ItemDetail(){
     const {id} = useParams();
+    
+    const [cantidad, setCantidad] = React.useState(1);
+    const [confirmar, setConfirmar] = React.useState(false);
+
+    const onAdd = (cant) => {
+        setCantidad(cant)
+        console.log(cant)
+    }
+
     return(
         <div className='itemDetail'>
             <div className='itemDetail__image'>
@@ -12,7 +23,8 @@ export default function ItemDetail(){
                 <h1>{products[id].name}</h1>
                 <h2>$ {products[id].price}</h2>
                 <p>{products[id].description}</p>
-                <ItemCount stock={products[id].stock} initial={1}/>
+                <button onClick={() => setConfirmar(true)}>Agregar al carrito</button>
+                {confirmar === true ? <NavLink to={'/Carrito'}><button>Ir al carrito</button></NavLink> : <ItemCount stock={products[id].stock} initial={1} onAdd={onAdd}/>}
             </div>
         </div>
     )
