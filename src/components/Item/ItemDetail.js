@@ -3,7 +3,12 @@ import { NavLink } from 'react-router-dom';
 import ItemCount from '../Header/ItemCount';
 import {useParams} from 'react-router-dom';
 import { products } from '../../data/products';
-export default function ItemDetail(){
+import { cartContext } from '../CartContext/CartContext';
+import Item from '../Header/Item';
+
+
+export default function ItemDetail({product}){
+    const {addToCart} = React.useContext(cartContext);
     const {id} = useParams();
     
     const [cantidad, setCantidad] = React.useState(1);
@@ -24,7 +29,7 @@ export default function ItemDetail(){
                 <h2>$ {products[id].price}</h2>
                 <p>{products[id].description}</p>
                 <button onClick={() => setConfirmar(true)}>Agregar al carrito</button>
-                {confirmar === true ? <NavLink to={'/Carrito'}><button>Ir al carrito</button></NavLink> : <ItemCount stock={products[id].stock} initial={1} onAdd={onAdd}/>}
+                {confirmar === true ? <NavLink to={'/Carrito'}><button>Ir al carrito</button></NavLink> : <ItemCount stock={products[id].stock} initial={1} onAdd={onAdd} onSubmit={() => addToCart({product})}/>}
             </div>
         </div>
     )

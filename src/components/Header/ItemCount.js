@@ -1,7 +1,6 @@
 import React from 'react';
-import { BrowserRouter, Routes, Route, NavLink } from 'react-router-dom';
 
-export default function ItemCount({stock, initial, onAdd}) {
+export default function ItemCount({stock, initial, onAdd, onSubmit}) {
     const [count, setCount] = React.useState(initial);
     const handleAdd = () => {
         if(count < stock) {
@@ -29,9 +28,6 @@ export default function ItemCount({stock, initial, onAdd}) {
                     <p className='itemCountUser'>{count}</p>
                     <button className='itemCountButton' onClick={handleAdd}>+</button>
                     <button className='itemCountButton' onClick={handleRemove}>-</button>
-                <div>
-                
-                </div>
             </div>
         </div>
     </div>

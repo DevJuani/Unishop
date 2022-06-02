@@ -3,16 +3,15 @@ import ProductList from "../ProductList/ProductList";
 export default function Home() {
     return (
         <div class="container">
-            <div class="imagenFija">
-                <img src= "images/germanusinger.png" alt=""/>
-            </div>
-            <div class="Item1">
-                <ProductList />
-            </div>
-            <div class="Item2">
-                <p>Texto peaorpsoerposapreoasdfasdfasdf</p>
-            </div>
-            <div class="ofertas">
-            </div>
+    <div class="bienvenida">
+        <h1>Bienvenido a la tienda de productos</h1>
+        <img src="images/germanusinger.png" alt="unicornio" />
+    </div>
+    <div class="ofertas">
+        <h1>Ofertas</h1>
+        <div class="ofertas-container">
+            <ProductList />
+        </div>
+    </div>
 </div>
     )}

@@ -18,8 +18,8 @@ export default function Navbar (){
                             <li class="nav-item" className='navItem'>
                                 <a className='liLink' href="/Productos">Productos</a>
                             </li>
-                            <li className='cartWidget'>
-                                <a href='/Carrito'><button>Carrito</button></a>
+                            <li class='nav-item' className='navItem'>
+                                <a href='/Carrito'><CartWidget /></a>
                             </li>
                         </ul>
                     </div>

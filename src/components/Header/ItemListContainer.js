@@ -20,7 +20,7 @@ import ItemList from './ItemList';
             })
         },);
         return (
-            loading? <h1>Cargando...</h1> :<ItemList products={productos} />
+            loading? <h1>Cargando...</h1> : <ItemList products={productos} />
         )
     }
 export default ItemListContainer;
