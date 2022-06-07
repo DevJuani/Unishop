@@ -1,5 +1,5 @@
 import React from 'react';
-import { NavLink } from 'react-router-dom';
+import { CartContext } from '../CartContext/CartContext';
 
 export default function ItemCount({stock, initial, onAdd, seConfirma, onSubmit}) {
     const [count, setCount] = React.useState(initial);
@@ -21,6 +21,8 @@ export default function ItemCount({stock, initial, onAdd, seConfirma, onSubmit})
             onAdd(count);
             setCount(initial);
             seConfirma();
+            alert('Producto(S) agregado(s) al carrito');
+            onSubmit();
         }
     }
     

@@ -17,14 +17,12 @@ function App() {
         <Navbar />
       </div>
       <BrowserRouter>
-        <provider>
           <Routes>
             <Route exact path ='/' element={<Home />} />
             <Route exct path="/Productos" element={<ProductList />} />
             <Route exact path="/Productos/:id" element={<ItemDetail />} />
             <Route exact path="/Carrito" element={<Cart />} />
           </Routes>
-        </provider>
       </BrowserRouter>
       </CartProvider>
     </>

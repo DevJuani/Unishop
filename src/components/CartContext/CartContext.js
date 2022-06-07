@@ -1,14 +1,15 @@
 import React from "react";
 
-const cartContext = React.createContext();
-const {Provider} = cartContext;
+const CartContext = React.createContext();
+const {Provider} = CartContext;
 
 const CartProvider = ({children}) => {
     const [cart, setCart] = React.useState([]);
 
     //addToCart
-    const addToCart = ({product}) => {
-        setCart([...cart, product]);
+    const addToCart = (item) => {
+        setCart([...cart, item]);
+        console.log(cart);
     }
 
     //removeFromCart
@@ -22,9 +23,10 @@ const CartProvider = ({children}) => {
     }
 
     //isInCart
-    const isInCart = (product) => {
-        return cart.find(item => item.id === product.id);
+    const isInCart = (id) => {
+        
     }
+
     return (
         <Provider value={{
             cart,
@@ -38,4 +40,4 @@ const CartProvider = ({children}) => {
     )
 }
 
-export {cartContext, CartProvider};
+export {CartContext, CartProvider};
