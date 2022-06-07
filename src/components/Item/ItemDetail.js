@@ -18,6 +18,9 @@ export default function ItemDetail({product}){
         setCantidad(cant)
         console.log(cant)
     }
+    const seConfirma = () => {
+        setConfirmar(true);
+    }
 
     return(
         <div className='itemDetail'>
@@ -28,8 +31,8 @@ export default function ItemDetail({product}){
                 <h1>{products[id].name}</h1>
                 <h2>$ {products[id].price}</h2>
                 <p>{products[id].description}</p>
-                <button onClick={() => setConfirmar(true)}>Agregar al carrito</button>
-                {confirmar === true ? <NavLink to={'/Carrito'}><button>Ir al carrito</button></NavLink> : <ItemCount stock={products[id].stock} initial={1} onAdd={onAdd} onSubmit={() => addToCart({product})}/>}
+                {confirmar === true ? <NavLink to={'/Carrito'}><button type='submit'>Ir al carrito</button></NavLink> :
+                <ItemCount stock={products[id].stock} initial={1} onAdd={onAdd} seConfirma={seConfirma} onSubmit={addToCart}/>}
             </div>
         </div>
     )

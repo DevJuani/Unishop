@@ -18,12 +18,12 @@ const CartProvider = ({children}) => {
 
     //clearCart
     const clearCart = () => {
-
+        setCart([]);
     }
 
     //isInCart
     const isInCart = (product) => {
-
+        return cart.find(item => item.id === product.id);
     }
     return (
         <Provider value={{
